@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- dessert.drinks tree view -->
+    <record id="dessert_drinks_view_tree" model="ir.ui.view">
+        <field name="name">Drinks</field>
+        <field name="model">dessert.drinks</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="desc"/>
+                <field name="price"/>
+                <field name="stock"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- dessert.drinks form view -->
+    <record id="dessert_drinks_view_form" model="ir.ui.view">
+        <field name="name">Drinks</field>
+        <field name="model">dessert.drinks</field>
+        <field name="arch" type="xml">
+            <form string="Drinks List">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="price"/>
+                        <field name="stock"/>
+                    </group>
+
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="desc"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- dessert.drinks action window -->
+    <record id="dessert_drinks_action" model="ir.actions.act_window">
+        <field name="name">Drinks</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dessert.drinks</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+    id="dessert_drinks_menu_act"
+    name="Drinks"
+    parent="dessert_menu_menu_categ"
+    action="dessert_drinks_action"
+    sequence="20"/>
+
+</odoo>

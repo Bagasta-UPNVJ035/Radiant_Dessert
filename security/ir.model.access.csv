@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dessert_drinks,access.dessert.drinks,model_dessert_drinks,,1,1,1,1
+access_dessert_package,access.dessert.package,model_dessert_package,,1,1,1,1
+access_dessert_icecream,access.dessert.icecream,model_dessert_icecream,,1,1,1,1
+access_dessert_waffles,access.dessert.waffles,model_dessert_waffles,,1,1,1,1
+access_dessert_order,access.dessert.order,model_dessert_order,,1,1,1,1
+access_dessert_order_packagedetail,access.dessert.order_packagedetail,model_dessert_order_packagedetail,,1,1,1,1
+access_dessert_order_wafflesdetail,access.dessert.order_wafflesdetail,model_dessert_order_wafflesdetail,,1,1,1,1

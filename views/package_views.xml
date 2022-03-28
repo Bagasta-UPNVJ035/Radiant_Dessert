@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- dessert.package tree view -->
+    <record id="dessert_package_view_tree" model="ir.ui.view">
+        <field name="name">List of Package</field>
+        <field name="model">dessert.package</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="drinks_id"/>
+                <field name="icecream_id"/>
+                <field name="pack"/>
+                <field name="desc"/>
+                <field name="price"/>
+                <field name="stock"/>
+            </tree> 
+        </field>
+    </record>
+
+    <!-- dessert.package form view -->
+    <record id="dessert_package_view_form" model="ir.ui.view">
+        <field name="name">List of Package</field>
+        <field name="model">dessert.package</field>
+        <field name="arch" type="xml">
+            <form string="Package">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="drinks_id"/>
+                        <field name="icecream_id"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="pack"/>
+                        <field name="desc"/>
+                        <field name="stock"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="price"/>
+                    </group>
+                    <notebook>
+                        <page string="Drinks Description">
+                            <field name="desc_drinks"/>
+                        </page>
+                        <page string="Ice Cream Description">
+                            <field name="desc_icecream"/>
+                        </page>
+                        
+                    </notebook>
+                </sheet>    
+            </form>
+        </field>
+    </record>
+
+    <!-- dessert.package action window -->
+    <record id="dessert_package_action" model="ir.actions.act_window">
+        <field name="name">Package Type List</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dessert.package</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="dessert_package_menu_act"
+    name="Package"
+    parent="dessert_menu_menu_categ"
+    action="dessert_package_action"
+    sequence="10"/>
+</odoo>
